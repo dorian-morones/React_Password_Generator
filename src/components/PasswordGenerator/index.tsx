@@ -12,14 +12,14 @@ const PasswordGenerator: React.FC<PasswordGeneratorProps> = ({
   letters = 6,
   type = 1
  }) => {
-  const [password, setPassword] = useState<string>('');
+  const [password, setPassword] = useState<string>('asfafsfas');
   const [show, setShow] = useState<boolean>(false)
 
   const handleShow = () => {
     setShow(true);
     setTimeout(() => {
       setShow(false);
-    }, 2000);
+    }, 6000);
   }
 
   const handleGenerate = (letters, type) => {
