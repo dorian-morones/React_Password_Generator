@@ -19,8 +19,8 @@ import { PasswordGenerator } from "react-password-generator"
 
 | Name     | Type     | Description |
 |----------|----------|----------|
-| ButtonValue | string     | The Text that will be displayed in the button |
-| letters     | number     | Define the passoworn letters number |
+| ButtonValue | string     | Define the text to be displayed on the button |
+| letters     | number     | Define the password letters number |
 | type        | number     | Define the password type |
 
 
