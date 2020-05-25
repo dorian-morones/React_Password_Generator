@@ -1,13 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import { PasswordGeneratorProps } from "./generator.types";
-import { GeneratorContainer } from "./styles/general";
+import { GeneratorContainer, Button, PasswordContainer } from "./styles/general";
+import { Random } from "../../utils/random";
 
-const PasswordGenerator: React.FC<PasswordGeneratorProps> = ({ theme }) => {
+const PasswordGenerator: React.FC<PasswordGeneratorProps> = ({
+  theme = 'standar',
+  color = 'black',
+  fill = 'grey',
+  onClick,
+  ButtonValue = 'new',
+  letters = 6,
+  type = 1
+ }) => {
+  const [password, setPassword] = useState<string>('');
+  const [show, setShow] = useState<boolean>(false)
+
+  const handleShow = () => {
+    setShow(true);
+    setTimeout(() => {
+      setShow(false);
+    }, 2000);
+  }
+
+  const handleGenerate = (letters, type) => {
+    let password = Random(letters, type);
+    setPassword(password);
+    handleShow();
+  }
 
   return (
     <GeneratorContainer>
-      <input value="password"></input>
-      <button onClick={e => console.log(e)}>new</button>
+      <Button onClick={e => handleGenerate(letters, type)}>{ButtonValue}</Button>
+      {show === true && <PasswordContainer>{password}</PasswordContainer>}
     </GeneratorContainer>
   );
 };
