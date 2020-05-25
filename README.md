@@ -1,4 +1,4 @@
-# React_Password_Generator
+# React Password Generator
 
 ## Overview
 React Module that generates a strong password ready to use in any project, it has already TypeScript support.
@@ -30,7 +30,7 @@ import { PasswordGenerator } from "react-password-generator"
 - **3:** [Alphanumeric]
 - **4:** [Mix - Letters, numbers and symbols]
 
-### Use components
+### Live component
 ``` js
 <PasswordGenerator ButtonValue={'New Password'} letters={6} type={4} />
 ```
