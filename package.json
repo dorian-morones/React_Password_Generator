@@ -1,9 +1,9 @@
 {
-  "name": "react-password-generator",
-  "version": "0.0.1",
+  "name": "react-password-generator-tp",
+  "version": "0.1.0",
   "description": "password generator",
   "keywords": "react password generator input form",
-  "license" : "MIT", 
+  "license" : "MIT",
   "main": "build/index.js",
   "module": "build/index.es.js",
   "files": ["build"],
